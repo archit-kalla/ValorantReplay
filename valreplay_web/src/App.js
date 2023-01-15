@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Main from './pages/Main';
-import Test2 from './pages/test2';
+import Test from './pages/test';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
       <Navbar />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/create" element={<Test2 />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
       </Router>
       <footer> &copy; 2023 ValReplay </footer>
