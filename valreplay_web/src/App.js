@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import Test from './pages/test';
+import Main from './pages/Main';
 import Test2 from './pages/test2';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      
       <Router>
       <Navbar />
         <Routes>
-          <Route path="/" element={<Test />} />
+          <Route path="/" element={<Main />} />
           <Route path="/create" element={<Test2 />} />
         </Routes>
       </Router>
-      <footer> &copy; 2021 ValReplay </footer>
-      <p> Made by ohmygodarchie</p>
+      <footer> &copy; 2023 ValReplay </footer>
+      <p>Not Affiliated with Riot Games</p>
+      <p>Made by ohmygodarchie</p>
       
 
     </div>

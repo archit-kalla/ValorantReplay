@@ -6,7 +6,7 @@ function Navbar() {
       <h1>ValReplay</h1>
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/create">New Replay</Link>
+        <Link to="/create">test</Link>
       </div>
     </nav>
   );
