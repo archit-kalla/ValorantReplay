@@ -1,16 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 
 // pass in a match object
 //match object has a map, a date, win/loss, a score, a duration
-function Match(props){
-    const match = props.match
-    const handleClick = (matchId,event) => {
-        console.log(matchId);
-    };
+function Match({match, onClick}){
+    const [selected, setSelect] = useState(false);
     return (
-        <div className="match" onClick={(event) => handleClick(match.matchId,event)}>
+        <div className="match" onClick={()=>onClick(match.matchId)}>
             <h3>MATCH</h3>
             <p>Map: {match.map}</p>
             <p>Date: {match.date}</p>
