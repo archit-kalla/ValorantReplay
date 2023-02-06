@@ -8,14 +8,12 @@ import MatchReview from "../components/MatchReview";
 //something like a button that when pressed re-calls the api, updates the matchList array and redisplays
 //would need to change return to a variable and then call the variable in the return
 function Main() {
-    let currentMatchId = -1;
-
     const [match_selected, setmatch_selected] = React.useState(-1);
     const [isMatchSelected, setisMatchSelected] = React.useState(false);
-
+    //handling the current selected match this way might add unnecessary api calls bc it might re render this main page
     let handleCurrentMatch = (matchId) => {
         console.log("Current match: " + matchId);
-        setisMatchSelected(true);
+        setisMatchSelected(true); 
         setmatch_selected(matchId);
     }
     return (
@@ -33,7 +31,7 @@ function Main() {
                                     "matchId":14},
                                 ]}
                         currentMatch={handleCurrentMatch} />
-            {isMatchSelected && <MatchReview matchId={currentMatchId} match_selected={match_selected} setmatch_selected={match_selected} />}
+            {isMatchSelected && <MatchReview matchId={match_selected} />}
         </div>
         
     );

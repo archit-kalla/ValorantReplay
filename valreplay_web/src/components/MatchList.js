@@ -7,7 +7,6 @@ function MatchList(props) {
     // let matchList = this.props.matchList;
     let currOpen = 0;
     const onClickHandler = (matchId) => {
-        // console.log("matchId: " + matchId);
         currOpen = matchId;
         props.currentMatch(currOpen);
     }
