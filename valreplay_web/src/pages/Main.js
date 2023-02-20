@@ -19,7 +19,7 @@ function Main() {
     return (
         <div className="main">
             <h1>MAIN</h1>
-            <MatchList matchList={[{"map":"haven",
+            <MatchList matchList={[{"map":"haven", //this array will be result of api call
                                     "date":"today",
                                     "result":"loss", 
                                     "score":"1-13",
