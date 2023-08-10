@@ -3,4 +3,8 @@
 <!-- implement showing the match list data -->
 <!-- need to create a match component -->
 <!-- in each match component pass the associated json resp. unpack that data in that component -->
-<p>{{ matchList }}</p> 
+<!-- <p>{{ matchList[0]["date"] }}</p>  -->
+
+<ng-container *ngIf="_matchList.length>0">
+    <match *ngFor="let match of _matchList" [match]="match"></match>
+</ng-container>

@@ -2,7 +2,6 @@
 
 <!-- this prolly needs its own component but idrc looks ok to me -->
 <input #box type="text" class="form-control" placeholder="Username" (keyup.enter)="update(box.value)">
-<p>{{ username }}</p>
 
 <app-match-list [username]="username"></app-match-list>
 

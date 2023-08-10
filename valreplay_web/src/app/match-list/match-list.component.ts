@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { Observable } from 'rxjs';
+import { MatchComponent } from '../match/match.component';
+import { matchInterface } from '../types/match-interface';
 
 @Component({
   selector: 'app-match-list',
@@ -15,9 +17,11 @@ export class MatchListComponent {
     this._username = value;
     this.getMatchList(value);
   };
+  
+  matchList: matchInterface[] = [];
+  _matchList: matchInterface[] = [];
 
-  matchList: any = "";
-  // probably needs to be an api service
+  // probably needs to be an api service -- done
   constructor(private apiservice: ApiService) { 
     this._username='';
   }
@@ -33,6 +37,10 @@ export class MatchListComponent {
   }
   
   private setMatchList(data: any) { //need to create type class or something
-    this.matchList = data;
+    this.matchList = JSON.parse(data);
+    for (let match of this.matchList){
+      console.log(match);
+      this._matchList.push(match);
+    }
   }
 }
