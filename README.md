@@ -17,9 +17,15 @@ This will be based off of the heatmap of player positions.
 Will not require account log in
 see positioning per engagement (a replay sort of design, strictly 2d)
 Based off of KillDto playerLocations similar to how in game hovering each kill works.
+
 [v1.1]: Heatmaps will change based off of similar team compositions and economic situation
+
 [v1.2-1.X]: Improvements to the heatmap and analysis of match results
+
 [v2.0]: Client will support 3d rendering of player positioning and heatmap
+
 [v2.1-2.x]: improvements on 3d rendering and heatmap/match analysis
+
 [v3.0]: Offer execute strategies and post plant setups
+
 [v3.1-3.x]: use data mining methods to extract data from collected match results, potenitally develop model to predict player positioning based off of team composition and economic situation. This will be a massive task and will most likely require a lot of time and effort / resources.
